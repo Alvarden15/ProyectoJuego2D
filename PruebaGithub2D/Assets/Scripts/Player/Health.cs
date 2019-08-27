@@ -9,12 +9,12 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health=gameObject.GetComponent<Slider>();
+        health=GameObject.FindGameObjectWithTag("").GetComponent<Slider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        FindObjectOfType<GameManager>();
     }
 }

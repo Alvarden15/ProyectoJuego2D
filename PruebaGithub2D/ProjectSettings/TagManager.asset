@@ -12,6 +12,7 @@ TagManager:
   - Plataformas
   - Mortales
   - Jumper
+  - Escaleras
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Obstaculos
   - Mortal
   - Plataforma
-  - 
+  - Escalera
   - 
   - 
   - 
