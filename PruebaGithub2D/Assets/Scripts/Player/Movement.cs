@@ -16,6 +16,7 @@ namespace Personal2D.Move
         public Transform feet;
         protected bool isJumping;
         public float jumpTime;
+        public float aceleration;
         private float axisX;
         Animator animator;
         //public Slider health;
@@ -48,7 +49,7 @@ namespace Personal2D.Move
             {
                 
                 animator.speed=2f;
-                rigid.velocity = new Vector2(axisX * (speed + 2), rigid.velocity.y);
+                rigid.velocity = new Vector2(axisX * (speed + aceleration), rigid.velocity.y);
             }
             else
             {

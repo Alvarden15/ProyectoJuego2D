@@ -124,13 +124,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.34
-  jumpForce: 10
+  jumpForce: 12
   ratio: 0.3
   tipoPiso:
     serializedVersion: 2
     m_Bits: 256
   feet: {fileID: 1617205705969182082}
-  jumpTime: 0.26
+  jumpTime: 0.28
+  aceleration: 2
 --- !u!114 &1617205704909404408
 MonoBehaviour:
   m_ObjectHideFlags: 0
