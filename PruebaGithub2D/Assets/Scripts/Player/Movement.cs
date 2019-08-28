@@ -46,10 +46,14 @@ namespace Personal2D.Move
             Vector2 move = new Vector2(axisX, axisY);
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                
+                animator.speed=2f;
                 rigid.velocity = new Vector2(axisX * (speed + 2), rigid.velocity.y);
             }
             else
             {
+                
+                animator.speed=1f;
                 rigid.velocity = new Vector2(axisX * speed, rigid.velocity.y);
             }
 

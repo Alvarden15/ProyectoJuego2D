@@ -13,6 +13,7 @@ TagManager:
   - Mortales
   - Jumper
   - Escaleras
+  - Gemas
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Mortal
   - Plataforma
   - Escalera
-  - 
+  - Gemas
   - 
   - 
   - 
