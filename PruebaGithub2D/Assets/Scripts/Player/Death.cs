@@ -19,7 +19,7 @@ public class Death : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag.Equals("Mortal")){
+        if(other.gameObject.tag.Equals("Mortales")){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

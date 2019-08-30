@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6024371871723698604}
   - component: {fileID: 6024371871723698611}
   - component: {fileID: 6024371871723698610}
+  - component: {fileID: 6024371873544650078}
+  - component: {fileID: 6024371873544650079}
   m_Layer: 15
   m_Name: GemaDelInfinito (1)
   m_TagString: Gemas
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6024371871723698609}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 71.94, y: 22.97, z: 752.68164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -100,3 +102,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6024371873544650078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024371871723698609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3836469cdff4a242865e9a0cbe87b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &6024371873544650079
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024371871723698609}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9375, y: 0.8125}
+    newSize: {x: 0.9375, y: 0.8125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.23511505, y: 0.34857178}
+      - {x: -0.41847992, y: 0.16491699}
+      - {x: -0.4210739, y: 0.036188126}
+      - {x: -0.066841125, y: -0.34087944}
+      - {x: 0.051445007, y: -0.35241508}
+      - {x: 0.41191864, y: 0.03734207}
+      - {x: 0.41399384, y: 0.18654251}
+      - {x: 0.22354889, y: 0.34857178}
