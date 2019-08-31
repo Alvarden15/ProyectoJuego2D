@@ -40,6 +40,11 @@ namespace Personal2D.Reaction
             {
                 body.AddForce(new Vector2(0, 140), ForceMode2D.Impulse);
             }
+
+            if(obstacule.gameObject.tag == "Gemas"){
+                
+                AudioManager.instance.CollectedGem();
+            }
         }
     }
 
