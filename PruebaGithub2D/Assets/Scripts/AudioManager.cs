@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public void CollectedGem(){
-        effects.volume=0.2f;
+        effects.volume=0.4f;
         effects.clip=clips[0];
         effects.Play();
     }
