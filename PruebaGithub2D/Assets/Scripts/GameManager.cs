@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     bool over;
     int colectados;
     public static GameManager instance=null;
+
+    GameObject GameOverScreen;
     private void Awake() {
         if(instance==null){
             instance=this;
@@ -16,16 +18,31 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this);
+
         colectados=0;
+        PlayerPrefs.SetInt("colectados",0);
+        GameOverScreen=GameObject.FindGameObjectWithTag("GameOver");
+        GameOverScreen.SetActive(false);
     }
 
+    private void Start() {
+
+        /*
+        GameOverScreen=GameObject.FindGameObjectWithTag("GameOver");
+        GameOverScreen.SetActive(false);
+         */
+        
+    }
     public void GameOver(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 0;
+        GameOverScreen.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Agarrar(int i){
-        
-        colectados+=0;
+
+        colectados+=i;
+        Debug.Log("Gemas colectadas: "+colectados);
     }
 
     public void Mostrar(){

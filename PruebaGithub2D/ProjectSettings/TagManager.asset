@@ -15,6 +15,7 @@ TagManager:
   - Escaleras
   - Gemas
   - Fin
+  - GameOver
   layers:
   - Default
   - TransparentFX
