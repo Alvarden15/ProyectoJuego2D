@@ -31,12 +31,17 @@ namespace Personal2D.Reaction
             switch(obstacule.gameObject.tag){
                 case "Obstaculos":
                       //var magnitud=1000;
-                    var fuerza = gameObject.transform.position - obstacule.transform.position;
-                    fuerza.Normalize();
+                      /*
+                      var fuerza = gameObject.transform.position - obstacule.transform.position;
+                      fuerza.Normalize();
+                       */
                     //body.AddForce(fuerza*magnitud);
                     body.AddForce(new Vector2(0, 40), ForceMode2D.Impulse);
                     health.value-=10;
                     //Debug.Log("" + obstacule.gameObject.name + " /" + obstacule.gameObject.tag);
+                    if(health.value<=0){
+                        GameManager.instance.GameOver();
+                    }
                 
                 break;
                 case "Jumper":
