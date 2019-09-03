@@ -45,7 +45,7 @@ namespace Personal2D.Move
             axisX = Input.GetAxis("Horizontal");
             float axisY = Input.GetAxis("Vertical");
             Vector2 move = new Vector2(axisX, axisY);
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 
                 animator.speed=2f;
@@ -77,7 +77,7 @@ namespace Personal2D.Move
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
 
-            if (inGround && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+            if (inGround && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)))
             {
                 source.clip = clips[0];
                 source.Play();
@@ -86,7 +86,7 @@ namespace Personal2D.Move
                 rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 //rigid.velocity = Vector2.up * jumpForce;
             }
-            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && isJumping)
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && isJumping)
             {
 
                 if (counter > 0)
