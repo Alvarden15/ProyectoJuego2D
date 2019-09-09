@@ -17,6 +17,7 @@ public class Pausar : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1;
+        //DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

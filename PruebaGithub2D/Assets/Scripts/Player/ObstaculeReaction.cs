@@ -12,11 +12,15 @@ namespace Personal2D.Reaction
         public Slider health;
         Rigidbody2D body;
 
+        GameObject GameOverScreen;
+
         // Start is called before the first frame update
         void Start()
         {
 
             body = gameObject.GetComponent<Rigidbody2D>();
+            GameOverScreen=GameObject.FindGameObjectWithTag("GameOver");
+            GameOverScreen.SetActive(false);
         }
 
         // Update is called once per frame
@@ -36,16 +40,17 @@ namespace Personal2D.Reaction
                       fuerza.Normalize();
                        */
                     //body.AddForce(fuerza*magnitud);
-                    body.AddForce(new Vector2(0, 40), ForceMode2D.Impulse);
+                    body.AddForce(new Vector2(0, 50), ForceMode2D.Impulse);
                     health.value-=10;
                     //Debug.Log("" + obstacule.gameObject.name + " /" + obstacule.gameObject.tag);
                     if(health.value<=0){
+                        GameOverScreen.SetActive(true);
                         GameManager.instance.GameOver();
                     }
                 
                 break;
                 case "Jumper":
-                    body.AddForce(new Vector2(0, 150), ForceMode2D.Impulse);
+                    body.AddForce(new Vector2(0, 240), ForceMode2D.Impulse);
                 ;break;
 
                 case "Gemas":
@@ -60,6 +65,7 @@ namespace Personal2D.Reaction
                 ;break;
 
                 case "Mortales":
+                    GameOverScreen.SetActive(true);
                     GameManager.instance.GameOver();
                 
                 ;break;

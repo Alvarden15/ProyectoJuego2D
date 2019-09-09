@@ -21,21 +21,20 @@ public class GameManager : MonoBehaviour
 
         colectados=0;
         PlayerPrefs.SetInt("colectados",0);
-        GameOverScreen=GameObject.FindGameObjectWithTag("GameOver");
-        GameOverScreen.SetActive(false);
+        //GameOverScreen=GameObject.FindGameObjectWithTag("GameOver");
+        //GameOverScreen.SetActive(false);
     }
 
     private void Start() {
-
+        
         /*
-        GameOverScreen=GameObject.FindGameObjectWithTag("GameOver");
-        GameOverScreen.SetActive(false);
+        
          */
         
     }
     public void GameOver(){
         Time.timeScale = 0;
-        GameOverScreen.SetActive(true);
+        //GameOverScreen.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
